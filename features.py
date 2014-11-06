@@ -1,6 +1,7 @@
 from collections import Counter
-import os
 import math
+import os
+import pickle
 import re
 import string
 
@@ -8,8 +9,8 @@ import pysrt
 import nltk
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_selection import VarianceThreshold
-from sklearn import cross_validation
-from sklearn import svm
+import sklearn.cross_validation
+import sklearn.svm
 
 URL_REGEX = '(?:www\.)|(?:https?://)\S+\.\S+'
 STOP_WORDS = set(nltk.corpus.stopwords.words('english')) | {"n't", "..."} | set(string.punctuation)
@@ -46,9 +47,9 @@ def extract_lines(subtitle_path):
     return subtitle_lines
 
 def classification_validation(features, labels):
-    X_train, X_test, y_train, y_test = cross_validation.train_test_split(features, labels, test_size=0.3, random_state=0)
+    X_train, X_test, y_train, y_test = sklearn.cross_validation.train_test_split(features, labels, test_size=0.3, random_state=0)
 
-    clf = svm.SVC().fit(X_train, y_train)
+    clf = sklearn.svm.SVC().fit(X_train, y_train)
 
     print "* Some predictions:"
     print "(actual_series : prediction)"
@@ -59,6 +60,11 @@ def classification_validation(features, labels):
     print "...etc."
 
     print "* Classifier score: {}".format(clf.score(X_test, y_test))
+
+class SeriesClassifier(object):
+    def __init__(self, svm, vectorizer):
+        self.svm = svm
+        self.vectorizer = vectorizer
 
 if __name__ == '__main__':
     shows = dict(comedy=['modern_family', '30_rock', 'big_bang_theory', 'parks_and_recreation', 'entourage'],
@@ -116,3 +122,9 @@ if __name__ == '__main__':
 
     # Cross-validation
     classification_validation(feature_vectors, series_labels)
+
+    # Training an SVM classifier and dumping it to a file
+    svm = sklearn.svm.SVC().fit(feature_vectors, series_labels)
+    series_clf = SeriesClassifier(svm, vectorizer)
+    with open('clf.pickle', 'w') as svm_file:
+        pickle.dump(series_clf, svm_file)
