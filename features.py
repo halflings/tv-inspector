@@ -49,32 +49,42 @@ def classification_validation(features, labels):
 
     clf = svm.SVC().fit(X_train, y_train)
 
-    print "* Classifier score: {}".format(clf.score(X_test, y_test))
-
-    print "* Predictions:"
+    print "* Some predictions:"
     print "(actual_series : prediction)"
-    for i, features in enumerate(X_test):
+    for i, features in enumerate(X_test[:10]):
         series = y_test[i]
         prediction = clf.predict(features)[0]
         print '"{}" predicted as "{}"'.format(series, prediction)
+    print "...etc."
+
+    print "* Classifier score: {}".format(clf.score(X_test, y_test))
 
 if __name__ == '__main__':
-    series_list = ['house_of_cards', 'entourage', 'parks_and_recreation']
+    shows = dict(comedy=['modern_family', '30_rock', 'big_bang_theory', 'parks_and_recreation', 'entourage'],
+                 political=['house_of_cards', 'the_west_wing', 'borgen', 'the_newsroom'],
+                 horror=['american_horror_story', 'penny_dreadful', 'the_walking_dead'])
+
+    series_list = sum(shows.values(), [])
+
     words_frequencies = []
-    labels = []
 
-    for series in series_list:
-        print '* {}'.format(series.upper())
-        subtitles = [os.path.join(series, sub) for sub in os.listdir(series) if not sub.startswith('.')]
+    series_labels = []
+    genre_labels = []
 
-        for sub_path in subtitles:
-            print '  . Analyzed subtitle "{}"'.format(sub_path)
-            subtitle_lines = extract_lines(sub_path)
-            # Some encoding errors can cause no lines to be detected
-            if not subtitle_lines:
-                continue
-            words_frequencies.append(extract_features(subtitle_lines))
-            labels.append(series)
+    for genre, genre_series in shows.iteritems():
+        for series in genre_series:
+            print '* {}'.format(series.upper())
+            subtitles = [os.path.join(series, sub) for sub in os.listdir(series) if not sub.startswith('.')]
+
+            for sub_path in subtitles:
+                print '  . Analyzed subtitle "{}"'.format(sub_path)
+                subtitle_lines = extract_lines(sub_path)
+                # Some encoding errors can cause no lines to be detected
+                if not subtitle_lines:
+                    continue
+                words_frequencies.append(extract_features(subtitle_lines))
+                series_labels.append(series)
+                genre_labels.append(genre)
 
 
     # Vectorizing the word count among all series
@@ -87,7 +97,7 @@ if __name__ == '__main__':
     feature_vectors = variance_threshold.fit_transform(feature_vectors)
 
     # Raw features per series
-    # raw_features = {series: [feature for i, feature in enumerate(feature_vectors.toarray()) if labels[i] == series] for series in series_list}
+    # raw_features = {series: [feature for i, feature in enumerate(feature_vectors.toarray()) if series_labels[i] == series] for series in series_list}
 
     # Cross-validation
-    classification_validation(feature_vectors, labels)
+    classification_validation(feature_vectors, series_labels)
