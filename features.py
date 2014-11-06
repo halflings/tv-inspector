@@ -88,11 +88,15 @@ if __name__ == '__main__':
                 genre_labels.append(genre)
 
     words_set = set(word for w_f in words_frequencies for word in w_f)
+
+    # Calculating the inverse document frequency for each word
     inverse_document_frequency = dict()
     for word in words_set:
         total_word_frequency = len(set(series_labels[i] for i, w_f in enumerate(words_frequencies) if word in w_f))
         inverse_document_frequency[word] = math.log(len(series_list) / total_word_frequency)
 
+
+    # Replacing word frequencies by tf-idf
     for w_f in words_frequencies:
         frequency_sum = float(max(w_f.values()))
         words = w_f.keys()
