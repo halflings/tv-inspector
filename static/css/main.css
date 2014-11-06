@@ -85,3 +85,16 @@ a:hover, a:active, a:focus {
   /* Hidden by default*/
   display: none;
 }
+
+/* Dialog text */
+.dialog-text {
+    width: 100%;
+    border: 30px solid rgba(42, 42, 42, 1);
+    padding: 22px;
+    background: none repeat scroll 0% 0% rgba(52, 61, 71, 1);
+    color: #FFF;
+    font-size: 17ox;
+    font-family: "Lucida Console",Monaco,monospace;
+    border-radius: 12px;
+    height: 319px;
+}
