@@ -1,0 +1,1529 @@
+1
+00:00:00,529 --> 00:00:01,279
+Ok...
+
+2
+00:00:03,147 --> 00:00:04,875
+The X10's are online
+
+3
+00:00:05,262 --> 00:00:11,220
+Gentlemen, I am now about to send a
+signal from this laptop through our
+local ISP
+
+4
+00:00:11,340 --> 00:00:15,373
+racing down fibre optic cable at
+the speed of light to San Fransisco,
+
+5
+00:00:15,493 --> 00:00:18,546
+bouncing off a satellite in
+geosynchronous orbit to
+Lisbon, Portugal,
+
+6
+00:00:18,666 --> 00:00:21,576
+where the data packets will be headed
+off to submerge transatlantic cables,
+
+7
+00:00:21,606 --> 00:00:23,292
+terminating in Halifax,
+Nova Scotia
+
+8
+00:00:23,384 --> 00:00:26,697
+and transfered across the continent
+via microwave relays back to our ISP
+
+9
+00:00:26,817 --> 00:00:30,024
+And the extend receiver
+attached to this...
+
+10
+00:00:31,007 --> 00:00:31,860
+Lamp.
+
+11
+00:00:34,844 --> 00:00:36,899
+Look at me, look at me.
+I've got goosebumps.
+
+12
+00:00:37,019 --> 00:00:39,804
+- Are we ready for the stereo?
+- Go for stereo.
+
+13
+00:01:01,556 --> 00:01:04,061
+- Hey guys.
+- Hello.
+
+14
+00:01:04,439 --> 00:01:05,763
+It's a little loud.
+
+15
+00:01:05,888 --> 00:01:07,790
+No problem... Turning it down.
+
+16
+00:01:08,436 --> 00:01:12,291
+San Francisco, Lisbon, Halifax...
+... et voil?
+
+17
+00:01:13,487 --> 00:01:17,282
+- OK, thanks.
+- Hang on, hang on. Do you not
+realise what we just did?
+
+18
+00:01:17,537 --> 00:01:19,671
+Yeah, you turned your stereo
+down with your laptop.
+
+19
+00:01:19,996 --> 00:01:24,561
+No, we turned our stereo down, by
+sending a signal around the world via
+the Internet.
+
+20
+00:01:25,887 --> 00:01:28,263
+Oh. You know you can get one of those
+universal remotes from Radioshack?
+
+21
+00:01:28,298 --> 00:01:29,742
+They're really cheap.
+
+22
+00:01:31,097 --> 00:01:32,772
+No, you don't get it. Howard,
+
+23
+00:01:32,898 --> 00:01:36,032
+- Enable public access.
+- Public access enabled.
+
+24
+00:01:39,945 --> 00:01:43,071
+- Boy, that's terrific. I'll see ya.
+- No hang on, hang on...
+
+25
+00:01:45,577 --> 00:01:46,462
+See?
+
+26
+00:01:48,098 --> 00:01:48,731
+No.
+
+27
+00:01:49,618 --> 00:01:53,431
+Someone in Sichuan province,
+China, is using his computer
+
+28
+00:01:53,556 --> 00:01:55,062
+to turn our lights on and off.
+
+29
+00:01:56,438 --> 00:01:58,043
+Oh, that's handy.
+
+30
+00:01:59,405 --> 00:02:01,392
+Here's a question... Why?
+
+31
+00:02:03,098 --> 00:02:04,963
+Because we can.
+
+32
+00:02:06,337 --> 00:02:08,653
+They found our
+remote control cars!
+
+33
+00:02:11,166 --> 00:02:14,471
+- Wait, what's on top of that?
+- Wireless webcams, wave hello!
+
+34
+00:02:15,446 --> 00:02:18,203
+The monster truck is
+out of Austin, Texas,
+
+35
+00:02:18,326 --> 00:02:21,893
+and the blue Viper is being
+operated from suburban Tel Aviv.
+
+36
+00:02:24,445 --> 00:02:27,071
+- You may want to put on slacks.
+- What?
+
+37
+00:02:29,808 --> 00:02:32,982
+Ew, stop it! No!
+Leave me alone!
+
+38
+00:02:36,467 --> 00:02:39,150
+- Who's running the red Corvette?
+- That would be me.
+
+39
+00:03:00,300 --> 00:03:02,600
+Season 1 Episode 9:
+The Cooper-Hofstadter Polarization
+
+1
+00:03:03,200 --> 00:03:06,500
+You know in the future,
+when we're disembodied brains in jars,
+
+2
+00:03:06,700 --> 00:03:09,400
+we're going to look at this
+as eight hours well wasted.
+
+3
+00:03:11,300 --> 00:03:14,600
+I don't want to be in a jar.
+I want my brain in an android body.
+
+4
+00:03:15,900 --> 00:03:17,700
+Eight feet tall and ribbed.
+
+5
+00:03:19,000 --> 00:03:20,100
+I'm with you.
+
+6
+00:03:20,200 --> 00:03:23,600
+I just have to make sure if I'm a
+synthetic human I'd still be Jewish.
+
+7
+00:03:25,800 --> 00:03:26,900
+I promised my mother.
+
+8
+00:03:29,100 --> 00:03:32,700
+I suppose you could have your
+android penis circumcised.
+
+9
+00:03:34,700 --> 00:03:37,900
+But that's something your rabbi would
+have to discuss with the manufacturer.
+
+10
+00:03:38,400 --> 00:03:41,200
+Not to mention you'd have
+to power down on saturdays.
+
+11
+00:03:43,300 --> 00:03:45,600
+Sheldon, why is this
+letter in the trash?
+
+12
+00:03:45,700 --> 00:03:47,300
+Well, there's always
+the possibility that
+
+13
+00:03:47,400 --> 00:03:50,300
+a trash can spontaneously
+formed around the letter
+
+14
+00:03:51,000 --> 00:03:53,700
+but Occam's rasor would suggest
+that someone threw it out.
+
+15
+00:03:54,800 --> 00:03:57,900
+It's from the Institute of
+Experimental Physics, they want us to
+
+16
+00:03:58,000 --> 00:04:00,200
+present our paper on the
+properties of supersolids
+
+17
+00:04:00,200 --> 00:04:03,200
+at the topical conference of
+Bose-Einstein condensates.
+
+18
+00:04:03,300 --> 00:04:05,400
+I know.
+I read it before I threw it out.
+
+19
+00:04:07,100 --> 00:04:09,300
+Ok, if I may drill down to
+the bedrock of my question:
+
+20
+00:04:09,500 --> 00:04:10,800
+why did you throw it out?
+
+21
+00:04:10,900 --> 00:04:14,600
+Because I have no interest in standing
+in the Rose room of the
+Pasadena Marriot,
+
+22
+00:04:14,800 --> 00:04:16,900
+in front of a group of
+judgmental strangers
+
+23
+00:04:17,100 --> 00:04:20,500
+who wouldn't recognise true genius if it
+was standing in front of them giving
+a speech.
+
+24
+00:04:21,500 --> 00:04:23,000
+Which if I were there,
+would be.
+
+25
+00:04:24,300 --> 00:04:25,500
+I don't know Sheldon.
+
+26
+00:04:25,500 --> 00:04:28,900
+Those topical conferences on
+Bose-Einstein condensates' parties
+are legendary
+
+27
+00:04:29,700 --> 00:04:33,100
+- Forget the parties!
+- Forget the parties? What a nerd.
+
+28
+00:04:35,200 --> 00:04:37,800
+Are there any other honours I've
+got that I don't know about?
+
+29
+00:04:37,900 --> 00:04:40,700
+Did the UPS dropped off a
+Nobel prize with my name on it?
+
+30
+00:04:41,000 --> 00:04:44,100
+Leonard, please don't take this the
+wrong way, but the day you win a
+Nobel prize,
+
+31
+00:04:44,100 --> 00:04:48,200
+is the day I begin my research on the
+drag coefficient of tassles on
+flying carpets.
+
+32
+00:04:50,500 --> 00:04:53,000
+The only thing missing from
+that insult was: "your mama".
+
+33
+00:04:54,800 --> 00:04:55,800
+I got one... Hey Leonard,
+
+34
+00:04:55,900 --> 00:04:59,200
+- Your mama's research methodology is so flawed...
+- Shut up, Howard.
+
+35
+00:05:00,500 --> 00:05:02,900
+- Sheldon, we have to do this.
+- No, we don't.
+
+36
+00:05:02,900 --> 00:05:05,300
+We have to take a nourishment,
+to expel waste,
+
+37
+00:05:05,300 --> 00:05:07,900
+and inhale enough oxygen to
+keep our cells from dying.
+
+38
+00:05:08,000 --> 00:05:09,400
+Everything else is optional.
+
+39
+00:05:10,500 --> 00:05:12,500
+Ok, let me put it this way:
+I'm doing it.
+
+40
+00:05:12,600 --> 00:05:14,800
+You can't. I'm the lead author.
+
+41
+00:05:15,000 --> 00:05:18,700
+Come on, the only reason you're the lead
+author is because we
+went alphabetically.
+
+42
+00:05:18,700 --> 00:05:21,200
+I let you think we went
+alphabetically to spare you
+
+43
+00:05:21,300 --> 00:05:23,700
+the humiliation with dealing with
+the fact that it was my idea.
+
+44
+00:05:23,700 --> 00:05:26,800
+Now to put too fine a point to it,
+but I was throwing you a bone.
+
+45
+00:05:27,700 --> 00:05:28,700
+You're welcome.
+
+46
+00:05:29,200 --> 00:05:32,600
+Excuse me, I designed the experiment
+that proved the hypothesis.
+
+47
+00:05:32,800 --> 00:05:34,500
+That doesn't mean proving.
+
+48
+00:05:34,800 --> 00:05:38,200
+So the entire scientific community
+is just supposed to take your word?
+
+49
+00:05:38,200 --> 00:05:40,200
+They're not supposed to,
+but they should.
+
+50
+00:05:41,300 --> 00:05:42,900
+Alright, I don't
+care what you say.
+
+51
+00:05:43,000 --> 00:05:45,300
+I'm going to the conference
+and I'm presenting our findings
+
+52
+00:05:45,300 --> 00:05:47,200
+And I forbid it.
+
+53
+00:05:48,000 --> 00:05:49,200
+You forbid it?
+
+54
+00:05:49,300 --> 00:05:51,800
+If I'm not taking credit
+for our work then nobody is.
+
+55
+00:05:51,900 --> 00:05:54,100
+- So, you admit that it's our work.
+- No.
+
+56
+00:05:54,200 --> 00:05:56,300
+Once again,
+I'm throwing you a bone.
+
+57
+00:05:57,100 --> 00:05:58,800
+And once again,
+you are welcome.
+
+58
+00:06:07,900 --> 00:06:11,000
+So, how's it going with Sheldon? Are you
+guys still not talking to each other?
+
+59
+00:06:11,100 --> 00:06:12,700
+Not only is he still
+not talking to me,
+
+60
+00:06:12,800 --> 00:06:16,500
+but there's this thing he does where he
+stares at you and tries to get your
+brain to explode.
+
+61
+00:06:18,400 --> 00:06:21,600
+You know, like in the classic
+sci-fi movie "Scanners"?
+
+62
+00:06:22,300 --> 00:06:23,800
+Like... . Bzzz.
+
+63
+00:06:25,600 --> 00:06:26,800
+Nevermind.
+
+64
+00:06:27,000 --> 00:06:28,500
+How about this one?
+
+65
+00:06:29,000 --> 00:06:32,600
+It says, I know my physics,
+but I'm still a fun guy.
+
+66
+00:06:33,200 --> 00:06:36,400
+Oh, I didn't know they
+still made corduroy suits.
+
+67
+00:06:36,400 --> 00:06:38,700
+They don't,
+that's why I saved this one.
+
+68
+00:06:39,500 --> 00:06:42,600
+Ok, well,
+let's just see what else you have.
+
+69
+00:06:43,000 --> 00:06:44,900
+Ok, here. Take this.
+
+70
+00:06:45,100 --> 00:06:49,000
+And this, and this,
+and this, and these...
+
+71
+00:06:49,100 --> 00:06:50,700
+Is this all stuff you
+want me to try on?
+
+72
+00:06:50,800 --> 00:06:52,600
+No, this is stuff I
+want you to throw out.
+
+73
+00:06:53,700 --> 00:06:57,300
+Seriously, don't even give it to
+charity, you won't be helping anyone.
+
+74
+00:06:58,200 --> 00:06:59,700
+What's this?
+
+75
+00:07:00,100 --> 00:07:02,600
+That's the bottled
+city of Kandor.
+
+76
+00:07:05,400 --> 00:07:09,400
+You see, Kandor was the capital
+city of the planet Krypton.
+
+77
+00:07:09,600 --> 00:07:12,300
+It was miniaturised by Brainiac
+before Krypton exploded
+
+78
+00:07:12,300 --> 00:07:14,200
+and then rescued by Superman.
+
+79
+00:07:15,300 --> 00:07:17,300
+Oh, nice.
+
+80
+00:07:18,500 --> 00:07:21,200
+It's a lot cooler when
+girls aren't looking at it.
+
+81
+00:07:22,200 --> 00:07:25,400
+Here, why don't you put these while
+I find a shirt and a sport cut match.
+
+82
+00:07:25,400 --> 00:07:26,400
+Right, be right back.
+
+83
+00:07:26,500 --> 00:07:28,200
+Where are you going?
+Just put them on.
+
+84
+00:07:28,300 --> 00:07:29,200
+Here?
+
+85
+00:07:29,300 --> 00:07:31,100
+Oh, are you shy?
+
+86
+00:07:31,200 --> 00:07:33,700
+- No, I'm not shy.
+- Don't worry I won't look.
+
+87
+00:07:33,900 --> 00:07:35,600
+I know you won't look.
+Why would you look?
+
+88
+00:07:35,600 --> 00:07:37,100
+There's nothing to see...
+Well, not 'nothing'...
+
+89
+00:07:37,100 --> 00:07:39,600
+Sweetie, put the pants on.
+
+90
+00:07:41,400 --> 00:07:44,000
+So, you know, isn't there maybe
+some way you and Sheldon could
+
+91
+00:07:44,100 --> 00:07:47,500
+- compromise on this whole presentation thing?
+- No, No.
+
+92
+00:07:47,700 --> 00:07:49,300
+Scientists do not compromise.
+
+93
+00:07:49,400 --> 00:07:51,500
+Our minds are trained
+to synthetize facts
+
+94
+00:07:51,500 --> 00:07:53,400
+and come to
+inarguable conclusions.
+
+95
+00:07:53,600 --> 00:07:56,600
+Not to mention,
+Sheldon is back-crap crazy.
+
+96
+00:07:59,700 --> 00:08:01,200
+What is this?
+
+97
+00:08:01,400 --> 00:08:03,300
+Oh, careful.
+
+98
+00:08:03,800 --> 00:08:07,300
+That's my original series
+Battlestar Galactica flight suit.
+
+99
+00:08:07,700 --> 00:08:10,000
+Oh, why didn't you
+wear it on Halloween?
+
+100
+00:08:10,400 --> 00:08:12,400
+Because it's not a costume,
+it's a flight suit.
+
+101
+00:08:15,700 --> 00:08:17,800
+Ok, alright, moving on.
+
+102
+00:08:17,900 --> 00:08:20,100
+Oh, wow. A paisley shirt.
+
+103
+00:08:20,100 --> 00:08:22,800
+It goes with my corduroy suit.
+
+104
+00:08:23,200 --> 00:08:26,100
+If you mean it should end up in
+the same place, then I agree.
+
+105
+00:08:27,500 --> 00:08:29,600
+Is this your only tie?
+
+106
+00:08:30,600 --> 00:08:33,500
+Technically, yes.
+But, if you'll notice...
+
+107
+00:08:34,400 --> 00:08:36,200
+It's reversible!
+
+108
+00:08:38,400 --> 00:08:40,100
+So it works as two.
+
+109
+00:08:40,100 --> 00:08:43,000
+Sweetie, I don't even
+think it works as one.
+
+110
+00:08:44,900 --> 00:08:46,500
+- Is this all your clothes?
+- Eh, yeah.
+
+111
+00:08:46,500 --> 00:08:48,400
+Everything since
+the eighth grade.
+
+112
+00:08:48,600 --> 00:08:51,400
+- The eighth grade?
+- My last growth sprout
+
+113
+00:08:53,600 --> 00:08:56,600
+Ok, well,
+let's go back to the curdoroy suit.
+
+114
+00:08:56,600 --> 00:08:58,600
+- Great.
+- Yeah.
+
+115
+00:09:00,200 --> 00:09:02,100
+I said no. Put it down.
+
+116
+00:09:08,000 --> 00:09:10,000
+Hey Sheldon.
+
+117
+00:09:10,300 --> 00:09:11,500
+Hello Penny.
+
+118
+00:09:13,000 --> 00:09:15,000
+Get anything good?
+
+119
+00:09:16,600 --> 00:09:20,100
+Just the latest copy of Applied
+Particle Physics quarterly.
+
+120
+00:09:20,100 --> 00:09:23,400
+Oh, you know, that is so weird
+that yours came and mine didn't.
+
+121
+00:09:29,200 --> 00:09:30,700
+It was a joke.
+
+122
+00:09:35,000 --> 00:09:36,900
+Yep.
+
+123
+00:09:37,100 --> 00:09:39,500
+Tip you waitresses.
+I'm here all week.
+
+124
+00:09:40,600 --> 00:09:42,700
+Penny, just to save you
+from further awkwardness,
+
+125
+00:09:42,800 --> 00:09:46,200
+know that I'm perfectly comfortable with
+the two of us climbing the stairs
+in silence.
+
+126
+00:09:46,500 --> 00:09:49,000
+Oh, yeah ok, me too.
+Zip it, lock it.
+
+127
+00:09:51,700 --> 00:09:52,900
+Put it in your pocket.
+
+128
+00:09:57,300 --> 00:09:59,800
+- So, you and Leonard...
+- Oh dear God...
+
+129
+00:10:00,500 --> 00:10:02,100
+Little misunderstanding, huh?
+
+130
+00:10:02,700 --> 00:10:04,000
+A little misunderstanding... ?
+
+131
+00:10:04,200 --> 00:10:07,400
+Galileo and the Pope had
+a little misunderstanding.
+
+132
+00:10:11,000 --> 00:10:14,800
+Anyway, I was talking to Leonard this
+morning and I think he feels really bad
+about it.
+
+133
+00:10:17,200 --> 00:10:18,600
+How do you feel?
+
+134
+00:10:19,900 --> 00:10:21,400
+I don't understand
+the question.
+
+135
+00:10:22,800 --> 00:10:26,100
+I'm just asking if it's difficult to
+be fighting with your best friend.
+
+136
+00:10:27,600 --> 00:10:29,400
+I haven't thought
+about it like that.
+
+137
+00:10:29,700 --> 00:10:32,600
+I wonder if I've been experiencing
+physiological manifestations
+
+138
+00:10:32,700 --> 00:10:35,300
+of some sort of unconscious
+emotional turmoil
+
+139
+00:10:36,700 --> 00:10:37,700
+Wait, what?
+
+140
+00:10:37,900 --> 00:10:39,700
+I couldn't poop this morning.
+
+141
+00:10:44,200 --> 00:10:47,100
+You should just talk to him,
+I'm sure you guys can work this out.
+
+142
+00:10:47,500 --> 00:10:50,300
+- Certainly preferable to my plan.
+- Which was?
+
+143
+00:10:50,700 --> 00:10:52,100
+A powerful laxative.
+
+144
+00:10:54,300 --> 00:10:56,500
+You absolutely
+should talk to him.
+
+145
+00:10:56,700 --> 00:10:59,300
+Look, I know Leonard values you as
+a friend and he told me himself
+
+146
+00:10:59,300 --> 00:11:02,800
+without your little idea there's no way
+he could come up with this whole
+experiment thing.
+
+147
+00:11:07,100 --> 00:11:08,800
+Excuse me. "Little idea"?
+
+148
+00:11:09,000 --> 00:11:10,800
+Yeah, I mean he tried
+to explain it to me,
+
+149
+00:11:10,900 --> 00:11:12,700
+- I didn't really understand it but...
+- Of course you didn't.
+
+150
+00:11:12,700 --> 00:11:14,300
+He said: "Little idea"?
+
+151
+00:11:15,800 --> 00:11:17,500
+Oh, well, no... Not...
+
+152
+00:11:17,700 --> 00:11:20,000
+- Not in those words.
+- In what words then, exactly?
+
+153
+00:11:20,500 --> 00:11:23,500
+Oh, you know... Gee. The exact words
+are... It's more the spirit in which
+he said...
+
+154
+00:11:23,600 --> 00:11:26,000
+- What did he say?
+- You had a lucky hunch
+
+155
+00:11:27,800 --> 00:11:30,100
+Hey, Sheldon, I've been thinking,
+instead of arguing about this...
+
+156
+00:11:30,100 --> 00:11:32,100
+Don't you ever
+speak to me again.
+
+157
+00:11:34,700 --> 00:11:35,700
+What... ?
+
+158
+00:11:48,800 --> 00:11:50,900
+Ok, I'm leaving
+for the conference.
+
+159
+00:11:51,200 --> 00:11:53,600
+Have fun presenting
+my "lucky hunch"
+
+160
+00:11:53,700 --> 00:11:55,400
+Shel, I didn't
+mean it like that.
+
+161
+00:11:55,500 --> 00:11:57,300
+- Then why did you say it?
+- I don't know, I wasn't...
+
+162
+00:11:57,300 --> 00:12:01,100
+- Were you trying to impress Penny?
+- No, no, not at all. A little bit.
+
+163
+00:12:02,300 --> 00:12:04,100
+How did that work out for you?
+
+164
+00:12:04,400 --> 00:12:07,900
+- Leonard, ready to go?
+- Libido: 1 Truth: 0.
+
+165
+00:12:10,800 --> 00:12:12,100
+Ok, I'm gonna ask
+you one more time.
+
+166
+00:12:12,200 --> 00:12:14,700
+We did the work together,
+let's present the paper together.
+
+167
+00:12:14,800 --> 00:12:16,600
+And I'm telling you
+for the last time,
+
+168
+00:12:16,700 --> 00:12:19,600
+it's pandering,
+it's undignifying, and bite me.
+
+169
+00:12:22,000 --> 00:12:23,000
+Let's go.
+
+170
+00:12:23,200 --> 00:12:25,100
+- Bye Sheldon.
+- Goodbye Penny.
+
+171
+00:12:36,300 --> 00:12:37,900
+One of these days... bshh!
+
+172
+00:12:41,400 --> 00:12:42,400
+There you go.
+
+173
+00:12:42,700 --> 00:12:44,300
+You're right this side
+does look better.
+
+174
+00:12:44,500 --> 00:12:47,200
+No, no, I didn't say better,
+I said "less stained".
+
+175
+00:12:49,400 --> 00:12:52,200
+I just checked the house.
+There's probably 20-25 people in there.
+
+176
+00:12:52,400 --> 00:12:53,900
+- You're kidding!
+- Is that all?
+
+177
+00:12:54,000 --> 00:12:57,400
+"All? " In particle
+physics 25 is Woodstock!
+
+178
+00:13:00,700 --> 00:13:02,800
+- Then good!
+- I wasn't expecting such a crowd,
+
+179
+00:13:02,900 --> 00:13:03,900
+I'm all nervous.
+
+180
+00:13:04,000 --> 00:13:06,200
+It's ok, just open with a joke,
+you'll be fine.
+
+181
+00:13:06,500 --> 00:13:08,400
+A joke... Ok.
+
+182
+00:13:09,800 --> 00:13:11,300
+How about this? Um, ok...
+
+183
+00:13:11,400 --> 00:13:12,900
+There's this farmer
+
+184
+00:13:13,100 --> 00:13:16,900
+and he has these chickens but
+they won't lay any eggs, so...
+
+185
+00:13:17,200 --> 00:13:19,000
+He calls a physicist to help.
+
+186
+00:13:19,300 --> 00:13:22,000
+The physicist then does
+some calculations,
+
+187
+00:13:22,200 --> 00:13:25,600
+and he says:
+"I have a solution,
+
+188
+00:13:25,900 --> 00:13:30,200
+but it only works for spherical
+chickens in a vacuum".
+
+189
+00:13:32,700 --> 00:13:33,700
+Right?
+
+190
+00:13:38,600 --> 00:13:40,700
+Oh, sorry,
+I just had heard it before.
+
+191
+00:13:41,400 --> 00:13:44,400
+- Let's roll. Hey, nice suit.
+- It's a classic, right?
+
+192
+00:13:45,900 --> 00:13:48,300
+I really should have
+brought my own car.
+
+1
+00:13:51,300 --> 00:13:52,900
+So, in conclusion,
+
+2
+00:13:53,000 --> 00:13:55,800
+the data show that at temperatures
+approaching absolute zero,
+
+3
+00:13:55,900 --> 00:13:59,400
+the moment of inertia changes,
+and a solid becomes a supersolid,
+
+4
+00:13:59,500 --> 00:14:03,600
+which clearly appears to be a
+previously unknown state of matter.
+
+5
+00:14:06,500 --> 00:14:07,600
+Thank you!
+
+6
+00:14:12,700 --> 00:14:14,800
+- Are there any questions?
+- Yeah.
+
+7
+00:14:15,000 --> 00:14:16,800
+What the hell was that?
+
+8
+00:14:19,400 --> 00:14:20,500
+Any other questions?
+
+9
+00:14:21,100 --> 00:14:25,600
+Doctor Sheldon Cooper here, I am the
+lead author of this particular paper.
+
+10
+00:14:27,300 --> 00:14:28,400
+Thank you.
+
+11
+00:14:30,400 --> 00:14:34,800
+And you sir, you have completely skipped
+over the part where I was walking
+through the park
+
+12
+00:14:35,000 --> 00:14:38,200
+and I saw these children on a
+merry-go-round which started me thinking
+
+13
+00:14:38,300 --> 00:14:41,100
+about the moment of inertia
+in gases like helium
+
+14
+00:14:41,200 --> 00:14:43,100
+at temperatures
+approaching absolute zero.
+
+15
+00:14:43,300 --> 00:14:46,100
+I didn't skip it.
+It's just an anecdote, it's not science.
+
+16
+00:14:46,200 --> 00:14:49,200
+Oh, I see. It was the apple
+falling on Newton's head,
+
+17
+00:14:49,300 --> 00:14:51,900
+- was that just an anecdote?
+- You are not Isaac Newton.
+
+18
+00:14:52,000 --> 00:14:55,300
+No, no, that's true. Gravity would have
+been apparent to me without the apple.
+
+19
+00:14:56,100 --> 00:14:57,800
+You cannot possibly
+be that arrogant.
+
+20
+00:14:57,900 --> 00:15:00,300
+You continue to underestimate me,
+my good man.
+
+21
+00:15:00,900 --> 00:15:04,700
+Look, if you weren't happy with my
+presentation then maybe you should have
+given it with me!
+
+22
+00:15:04,800 --> 00:15:06,800
+As I have explained repeatedly,
+unlike you,
+
+23
+00:15:06,800 --> 00:15:09,200
+I don't need validation
+from lesser minds.
+
+24
+00:15:09,300 --> 00:15:10,100
+No offense.
+
+25
+00:15:10,700 --> 00:15:11,900
+Really, so why did you come?
+
+26
+00:15:11,900 --> 00:15:13,300
+Because I knew
+you'd screw this up.
+
+27
+00:15:13,300 --> 00:15:14,700
+I didn't screw it up!
+
+28
+00:15:14,700 --> 00:15:17,100
+Oh, please.
+I admit that spherical chicken joke,
+
+29
+00:15:17,100 --> 00:15:18,100
+- that was hilarious.
+- Thank you.
+
+30
+00:15:18,200 --> 00:15:20,100
+But it was straight
+downhill from there.
+
+31
+00:15:20,300 --> 00:15:22,400
+I've had enough of
+your condescendship.
+
+32
+00:15:22,500 --> 00:15:25,400
+Maybe I didn't go to college
+when I was 11 like you.
+
+33
+00:15:25,400 --> 00:15:28,900
+Maybe I got my doctorate
+at 24 instead of 16
+
+34
+00:15:28,900 --> 00:15:30,600
+but you are not the only
+person who is smarter than
+
+35
+00:15:30,700 --> 00:15:32,100
+everyone else in this room!
+
+36
+00:15:33,400 --> 00:15:34,000
+No offense.
+
+37
+00:15:36,100 --> 00:15:37,900
+And I am clearly
+not the only person
+
+38
+00:15:37,900 --> 00:15:39,700
+who is tormented by insecurity
+
+39
+00:15:39,700 --> 00:15:41,800
+and has an ego in need
+of constant validation!
+
+40
+00:15:41,900 --> 00:15:43,500
+So you admit you're an egotist?
+
+41
+00:15:43,800 --> 00:15:44,500
+Yes!
+
+42
+00:15:46,000 --> 00:15:48,900
+My name is doctor Leonard Hofstadter
+and I can never please my parents so
+
+43
+00:15:48,900 --> 00:15:51,300
+I need all my self esteem
+from strangers like you!
+
+44
+00:15:51,400 --> 00:15:52,400
+But he's worse!
+
+45
+00:15:53,000 --> 00:15:54,300
+Ok, that's it!
+
+46
+00:15:54,700 --> 00:15:55,300
+Stop it!
+
+47
+00:15:58,000 --> 00:16:00,600
+You cannot blow up my
+head with your mind!
+
+48
+00:16:00,800 --> 00:16:02,500
+Then I'll settle
+for your aneurism!
+
+49
+00:16:03,100 --> 00:16:04,700
+- Stop it!
+- You hit me!
+
+50
+00:16:04,800 --> 00:16:05,900
+You saw that he hit me!
+
+51
+00:16:06,100 --> 00:16:07,600
+You tried to blow up my head!
+
+52
+00:16:07,600 --> 00:16:08,500
+So it was working!
+
+53
+00:16:08,500 --> 00:16:10,900
+It wa... It was not!
+You're a nutcase!
+
+54
+00:16:10,900 --> 00:16:11,900
+We'll see about that!
+
+55
+00:16:12,000 --> 00:16:13,300
+Heads up,
+you people in the front row!
+
+56
+00:16:13,400 --> 00:16:14,600
+This is a splash zone!
+
+57
+00:16:15,800 --> 00:16:16,400
+Stop it!
+
+58
+00:16:16,900 --> 00:16:17,400
+Just quit it!
+
+59
+00:16:23,600 --> 00:16:25,800
+Is this usually how
+these physics things go?
+
+60
+00:16:26,200 --> 00:16:27,500
+More often than you think.
+
+61
+00:16:44,100 --> 00:16:45,900
+You could have offered
+me a ride home.
+
+62
+00:16:47,800 --> 00:16:49,500
+You're lucky I
+didn't run you over.
+
+63
+00:16:50,700 --> 00:16:52,500
+I really don't understand
+what you're so unhappy about.
+
+64
+00:16:52,600 --> 00:16:54,200
+You begged me to come, I came.
+
+65
+00:16:54,200 --> 00:16:55,400
+There's just no pleasing you.
+
+66
+00:16:56,400 --> 00:16:59,000
+You're right, I'm the problem,
+I'm the one that needs help.
+
+67
+00:16:59,500 --> 00:17:01,600
+Well, that's not much of an
+apology but I'll take it.
+
+68
+00:17:02,800 --> 00:17:04,000
+Excuse me,
+
+69
+00:17:04,600 --> 00:17:06,800
+is there anything you
+would apologise for?
+
+70
+00:17:08,400 --> 00:17:09,100
+Yes.
+
+71
+00:17:10,200 --> 00:17:12,400
+I'm sorry I tried to
+blow up your head.
+
+72
+00:17:14,300 --> 00:17:15,400
+It was uncalled for.
+
+73
+00:17:16,900 --> 00:17:17,900
+You won't believe this.
+
+74
+00:17:17,900 --> 00:17:20,800
+Somebody got the whole thing with
+their cell phone and put it on YouTube!
+
+75
+00:17:21,900 --> 00:17:22,500
+What?
+
+76
+00:17:24,200 --> 00:17:26,500
+- Who would do that?
+- That would be me.
+
+77
+00:17:28,300 --> 00:17:30,000
+Hey, check it out,
+it's a featured video!
+
+78
+00:17:30,100 --> 00:17:32,000
+He hit me!
+You saw that he hit me!
+
+79
+00:17:33,100 --> 00:17:36,100
+- Then it was working!
+- It was not working! You're a nutcase!
+
+80
+00:17:36,100 --> 00:17:37,100
+We will see about that!
+
+81
+00:17:37,100 --> 00:17:38,400
+You people in the
+front row heads up!
+
+82
+00:17:38,400 --> 00:17:39,700
+This is splash zone
+
+83
+00:17:41,300 --> 00:17:43,900
+Stop it! Leave it, leave it!
+
+84
+00:17:47,400 --> 00:17:48,900
+You want a volcano nerve pinch!
+
+85
+00:17:50,600 --> 00:17:53,000
+You should clip your fingernails!
+Those hurt!
+
+86
+00:17:54,600 --> 00:17:57,700
+Oh, Jeez.
+does this suit really look that bad?
+
+87
+00:17:58,800 --> 00:18:00,700
+Forget your suit,
+look at my arms waving.
+
+88
+00:18:00,700 --> 00:18:02,300
+I'm like a flamingo on Ritalin.
+
+89
+00:18:05,400 --> 00:18:06,100
+Howard,
+
+90
+00:18:06,400 --> 00:18:08,800
+would you like to explain to
+me why your Facebook page
+
+91
+00:18:08,800 --> 00:18:11,100
+has a picture of me sleeping
+on your shoulder captioned
+
+92
+00:18:11,100 --> 00:18:12,500
+"me and my girlfriend"?
+
+93
+00:18:14,900 --> 00:18:16,900
+Uh oh, here comes the talk.
+
+9999
+00:00:0,500 --> 00:00:2,00
+<font color="#ffff00" size=14>www.tvsubtitles.net</font>
