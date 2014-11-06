@@ -62,9 +62,22 @@ def classification_validation(features, labels):
     print "* Classifier score: {}".format(clf.score(X_test, y_test))
 
 class SeriesClassifier(object):
-    def __init__(self, svm, vectorizer):
+    def __init__(self, svm, vectorizer, inverse_document_frequency):
         self.svm = svm
         self.vectorizer = vectorizer
+        self.inverse_document_frequency = inverse_document_frequency
+
+    def extract_features(self, lines):
+        w_f = extract_features(lines)
+        for word in w_f:
+            term_frequency = w_f[word]
+            tf_idf = term_frequency * self.inverse_document_frequency[word]
+            w_f[word] = tf_idf
+
+        return self.vectorizer.transform(w_f)
+
+    def predict(self, features):
+        return self.svm.predict(features)[0]
 
 if __name__ == '__main__':
     shows = dict(comedy=['modern_family', '30_rock', 'big_bang_theory', 'parks_and_recreation', 'entourage'],
@@ -96,7 +109,7 @@ if __name__ == '__main__':
     words_set = set(word for w_f in words_frequencies for word in w_f)
 
     # Calculating the inverse document frequency for each word
-    inverse_document_frequency = dict()
+    inverse_document_frequency = Counter()
     for word in words_set:
         total_word_frequency = len(set(series_labels[i] for i, w_f in enumerate(words_frequencies) if word in w_f))
         inverse_document_frequency[word] = math.log(len(series_list) / total_word_frequency)
@@ -125,6 +138,6 @@ if __name__ == '__main__':
 
     # Training an SVM classifier and dumping it to a file
     svm = sklearn.svm.SVC().fit(feature_vectors, series_labels)
-    series_clf = SeriesClassifier(svm, vectorizer)
+    series_clf = SeriesClassifier(svm, vectorizer, inverse_document_frequency)
     with open('clf.pickle', 'w') as svm_file:
         pickle.dump(series_clf, svm_file)
