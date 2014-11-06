@@ -100,4 +100,4 @@ if __name__ == '__main__':
     # raw_features = {series: [feature for i, feature in enumerate(feature_vectors.toarray()) if series_labels[i] == series] for series in series_list}
 
     # Cross-validation
-    classification_validation(feature_vectors, series_labels)
+    classification_validation(feature_vectors, genre_labels)
