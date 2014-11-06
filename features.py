@@ -1,5 +1,6 @@
 from collections import Counter
 import os
+import math
 import re
 import string
 
@@ -51,7 +52,7 @@ def classification_validation(features, labels):
 
     print "* Some predictions:"
     print "(actual_series : prediction)"
-    for i, features in enumerate(X_test[:10]):
+    for i, features in enumerate(X_test[:20]):
         series = y_test[i]
         prediction = clf.predict(features)[0]
         print '"{}" predicted as "{}"'.format(series, prediction)
@@ -86,18 +87,28 @@ if __name__ == '__main__':
                 series_labels.append(series)
                 genre_labels.append(genre)
 
+    words_set = set(word for w_f in words_frequencies for word in w_f)
+    inverse_document_frequency = dict()
+    for word in words_set:
+        total_word_frequency = len(set(series_labels[i] for i, w_f in enumerate(words_frequencies) if word in w_f))
+        inverse_document_frequency[word] = math.log(len(series_list) / total_word_frequency)
+
+    for w_f in words_frequencies:
+        frequency_sum = float(max(w_f.values()))
+        words = w_f.keys()
+        for word in words:
+            term_frequency = w_f[word]
+            tf_idf = term_frequency * inverse_document_frequency[word]
+            w_f[word] = tf_idf
 
     # Vectorizing the word count among all series
     vectorizer = DictVectorizer()
     feature_vectors = vectorizer.fit_transform(words_frequencies)
 
     # Dropping features with low variance
-    MIN_VARIANCE = 0.03
+    MIN_VARIANCE = 0.05
     variance_threshold = VarianceThreshold(threshold=MIN_VARIANCE)
     feature_vectors = variance_threshold.fit_transform(feature_vectors)
 
-    # Raw features per series
-    # raw_features = {series: [feature for i, feature in enumerate(feature_vectors.toarray()) if series_labels[i] == series] for series in series_list}
-
     # Cross-validation
-    classification_validation(feature_vectors, genre_labels)
+    classification_validation(feature_vectors, series_labels)
