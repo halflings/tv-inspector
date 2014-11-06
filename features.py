@@ -1,9 +1,7 @@
 from collections import Counter, defaultdict
 import os
 import re
-import random
 import string
-import sys
 
 import pysrt
 import nltk
@@ -18,8 +16,8 @@ def extract_features(subtitle_text):
         tokens = nltk.word_tokenize(line)
         for token in tokens:
             token = token.lower()
-            # Skipping stop words and other unusable tokens
-            if token in STOP_WORDS or token.startswith("'"):
+            # Skipping stop words, tokens starting with "'" and one reoeated character (like '---' and such)
+            if token in STOP_WORDS or token.startswith("'") or len(set(token)) == 1:
                 continue
             # Stemming
             token = STEMMER.stem(token)
@@ -27,7 +25,10 @@ def extract_features(subtitle_text):
     return word_counter
 
 def extract_lines(subtitle_path):
-    subtitle_object = pysrt.open(subtitle_path)
+    try:
+        subtitle_object = pysrt.open(subtitle_path)
+    except UnicodeDecodeError:
+        subtitle_object = pysrt.open(subtitle_path, encoding='latin1')
     subtitle_lines = []
     for sub in subtitle_object:
         text = sub.text
@@ -41,15 +42,19 @@ def extract_lines(subtitle_path):
 
 if __name__ == '__main__':
     series_list = ['house_of_cards', 'entourage']
-    subtitles = {series: [os.path.join(series, sub) for sub in os.listdir(series)] for series in series_list}
-    features_db = defaultdict(list)
+    subtitles = {series: [os.path.join(series, sub) for sub in os.listdir(series) if not sub.startswith('.')]
+                 for series in series_list}
+    features_db = defaultdict(Counter)
     for series in series_list:
-        random_sub_path = random.choice(subtitles[series])
-        print '{} - {}'.format(series.upper(), random_sub_path)
+        print '* {}'.format(series.upper())
 
-        subtitle_lines = extract_lines(random_sub_path)
-        #print subtitle_lines
-        features = extract_features(subtitle_lines)
-        print features.most_common(30)
-        features_db[series].append(features)
+        for sub_path in subtitles[series]:
+            print '  . Analyzed subtitle "{}"'.format(sub_path)
+            subtitle_lines = extract_lines(sub_path)
+            features_db[series] += extract_features(subtitle_lines)
+
+        print
+        print   '! FEATURES:'
+        print
+        print '\n'.join(map(str, features_db[series].most_common(50)))
         print
