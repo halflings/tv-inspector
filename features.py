@@ -1,6 +1,9 @@
-from collections import Counter
+from collections import Counter, defaultdict
+import os
 import re
+import random
 import string
+import sys
 
 import pysrt
 import nltk
@@ -37,8 +40,16 @@ def extract_lines(subtitle_path):
     return subtitle_lines
 
 if __name__ == '__main__':
-    EXAMPLE_SRT = 'entourage.srt'
-    subtitle_lines = extract_lines(EXAMPLE_SRT)
-    #print subtitle_lines
-    features = extract_features(subtitle_lines)
-    print features.most_common(30)
+    series_list = ['house_of_cards', 'entourage']
+    subtitles = {series: [os.path.join(series, sub) for sub in os.listdir(series)] for series in series_list}
+    features_db = defaultdict(list)
+    for series in series_list:
+        random_sub_path = random.choice(subtitles[series])
+        print '{} - {}'.format(series.upper(), random_sub_path)
+
+        subtitle_lines = extract_lines(random_sub_path)
+        #print subtitle_lines
+        features = extract_features(subtitle_lines)
+        print features.most_common(30)
+        features_db[series].append(features)
+        print
