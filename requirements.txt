@@ -1,3 +1,4 @@
 pysrt
 scikit-learn
 nltk
+numpy
