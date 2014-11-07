@@ -7,12 +7,14 @@ import string
 
 import pysrt
 import nltk
+import numpy as np
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.decomposition import PCA
 from sklearn.feature_selection import VarianceThreshold
 import sklearn.cross_validation
 import sklearn.svm
 import sklearn.naive_bayes
+from sklearn.cluster import MeanShift, estimate_bandwidth
 
 URL_REGEX = '(?:www\.)|(?:https?://)\S+\.\S+'
 STOP_WORDS = set(nltk.corpus.stopwords.words('english')) | {"n't", "..."} | set(string.punctuation)
@@ -49,13 +51,13 @@ def extract_lines(subtitle_path):
     return subtitle_lines
 
 def classification_validation(features, labels):
-    X_train, X_test, y_train, y_test = sklearn.cross_validation.train_test_split(features, labels, test_size=0.3, random_state=0)
+    X_train, X_test, y_train, y_test = sklearn.cross_validation.train_test_split(features, labels, test_size=0.4, random_state=0)
 
     clf = get_classifier().fit(X_train, y_train)
 
     print "* Some predictions:"
     print "(actual_series : prediction)"
-    for i, features in enumerate(X_test[:5]):
+    for i, features in enumerate(X_test):
         series = y_test[i]
         prediction = clf.predict(features)[0]
         print '"{}" predicted as "{}"'.format(series, prediction)
@@ -101,6 +103,7 @@ if __name__ == '__main__':
     words_frequencies = []
 
     series_labels = []
+    subtitle_labels = []
     genre_labels = []
 
     for genre, genre_series in shows.iteritems():
@@ -117,6 +120,7 @@ if __name__ == '__main__':
                 words_frequencies.append(extract_features(subtitle_lines))
                 series_labels.append(series)
                 genre_labels.append(genre)
+                subtitle_labels.append(sub_path)
 
     words_set = set(word for w_f in words_frequencies for word in w_f)
 
@@ -124,8 +128,9 @@ if __name__ == '__main__':
     inverse_document_frequency = Counter()
     total_frequency = float(sum(sum(w_f.values()) for w_f in words_frequencies))
     for word in words_set:
-        total_word_frequency = sum(w_f[word] for w_f in words_frequencies)
-        inverse_document_frequency[word] = math.log(total_frequency / total_word_frequency)
+        total_word_frequency = len(set(series_labels[i] for i, w_f in enumerate(words_frequencies) if word in w_f))
+        inverse_document_frequency[word] = math.log(len(series_list) / total_word_frequency)
+        #inverse_document_frequency[word] = math.log(total_frequency / total_word_frequency)
 
 
     # Replacing word frequencies by tf-idf
@@ -159,3 +164,41 @@ if __name__ == '__main__':
     series_clf = SeriesClassifier(clf, vectorizer, variance_threshold, pca, inverse_document_frequency)
     with open('clf.pickle', 'w') as clf_file:
         pickle.dump(series_clf, clf_file)
+
+    # Clustering
+    CLUSTERING = False
+    if CLUSTERING:
+        temp_pca = PCA(n_components=4)
+        X = temp_pca.fit_transform(feature_vectors)
+        bandwidth = estimate_bandwidth(X, quantile=0.2, n_samples=500)
+        ms = MeanShift(bandwidth=bandwidth, bin_seeding=True)
+        ms.fit(X)
+        labels = ms.labels_
+        cluster_centers = ms.cluster_centers_
+
+        for i, label in enumerate(ms.labels_):
+            print label, subtitle_labels[i]
+
+        labels_unique = np.unique(labels)
+        n_clusters_ = len(labels_unique)
+
+        print("number of estimated clusters : %d" % n_clusters_)
+
+        ###############################################################################
+        # Plot result
+        import matplotlib.pyplot as plt
+        from itertools import cycle
+
+        plt.figure(1)
+        plt.clf()
+
+        colors = cycle('bgrcmykbgrcmykbgrcmykbgrcmyk')
+        for k, col in zip(range(n_clusters_), colors):
+            my_members = labels == k
+            cluster_center = cluster_centers[k]
+            plt.plot(X[my_members, 0], X[my_members, 1], col + '.')
+            plt.plot(cluster_center[0], cluster_center[1], 'o', markerfacecolor=col,
+                     markeredgecolor='k', markersize=14)
+        plt.title('Estimated number of clusters: %d' % n_clusters_)
+        plt.show()
+
