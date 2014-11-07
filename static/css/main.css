@@ -136,3 +136,26 @@ a:hover, a:active, a:focus {
     font-size: 10px;
     margin-top: 24px;
 }
+
+ul.similar {
+    list-style: outside none none;
+    margin-top: 10px;
+    background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.24);
+    color: rgba(255, 255, 255, 1);
+    font-family: monospace;
+    border-radius: 9px;
+}
+ul.similar li {
+    display: inline;
+    margin: 10px 13px;
+}
+
+ul.similar li img{
+    height: 90px;
+    margin: 6px 20px;
+    border-radius: 5px;
+}
+
+#prediction-similar {
+    margin-top: 20px;
+}

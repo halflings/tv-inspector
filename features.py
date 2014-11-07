@@ -72,7 +72,7 @@ def extract_lines(subtitle_path):
     return subtitle_lines
 
 def classification_validation(features, labels):
-    kf = sklearn.cross_validation.StratifiedKFold(labels, n_folds=3)
+    kf = sklearn.cross_validation.StratifiedKFold(labels, n_folds=5)
     clf_scores = []
     print '# CROSS-VALIDATION'
     for train, test in kf:
