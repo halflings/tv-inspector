@@ -72,19 +72,21 @@ def extract_lines(subtitle_path):
     return subtitle_lines
 
 def classification_validation(features, labels):
-    X_train, X_test, y_train, y_test = sklearn.cross_validation.train_test_split(features, labels, test_size=0.4, random_state=0)
+    kf = sklearn.cross_validation.StratifiedKFold(labels, n_folds=3)
+    clf_scores = []
+    print '# CROSS-VALIDATION'
+    for train, test in kf:
+        X_train, X_test, y_train, y_test = features[train], features[test], labels[train], labels[test]
+        clf = get_classifier().fit(X_train, y_train)
 
-    clf = get_classifier().fit(X_train, y_train)
+        clf_score = clf.score(X_test, y_test)
+        clf_scores.append(clf_score)
+        print "  . Score: {}".format(clf_score)
 
-    print "* Some predictions:"
-    print "(actual_series : prediction)"
-    for i, features in enumerate(X_test):
-        series = y_test[i]
-        prediction = clf.predict(features)[0]
-        print '"{}" predicted as "{}"'.format(series, prediction)
-    print "...etc."
+    avg_clf_score = sum(clf_scores) / len(clf_scores)
+    print
+    print "=> Average classifier score: {}".format(avg_clf_score)
 
-    print "* Classifier score: {}".format(clf.score(X_test, y_test))
 
 def get_classifier():
     return sklearn.naive_bayes.GaussianNB()
@@ -142,6 +144,8 @@ if __name__ == '__main__':
                 genre_labels.append(genre)
                 subtitle_labels.append(sub_path)
 
+    series_labels, genre_labels, subtitle_labels = map(np.array, [series_labels, genre_labels, subtitle_labels])
+
     words_set = set(word for w_f in words_frequencies for word in w_f)
 
     # Calculating the inverse document frequency for each word
@@ -186,7 +190,7 @@ if __name__ == '__main__':
         pickle.dump(series_clf, clf_file)
 
     # Clustering
-    CLUSTERING = True
+    CLUSTERING = False
     if CLUSTERING:
         temp_pca = PCA(n_components=4)
         X = temp_pca.fit_transform(feature_vectors)
@@ -196,8 +200,8 @@ if __name__ == '__main__':
         labels = ms.labels_
         cluster_centers = ms.cluster_centers_
 
-        for i, label in enumerate(ms.labels_):
-            print label, subtitle_labels[i]
+        # for i, label in enumerate(ms.labels_):
+        #     print label, subtitle_labels[i]
 
         labels_unique = np.unique(labels)
         n_clusters_ = len(labels_unique)
