@@ -2,6 +2,7 @@ import pickle
 
 from flask import Flask, render_template, request, jsonify
 
+# Necessary to open a pickled classifier
 from features import SeriesClassifier
 
 app = Flask(__name__)
@@ -20,6 +21,7 @@ def predict_dialog():
     features = series_classifier.extract_features(lines)
 
     prediction = series_classifier.predict(features)
+    prediction = prediction.replace('_', ' ').title()
     return jsonify(ok=True, prediction=prediction)
 
 if __name__ == '__main__':

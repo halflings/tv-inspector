@@ -8,6 +8,7 @@ import string
 import pysrt
 import nltk
 from sklearn.feature_extraction import DictVectorizer
+from sklearn.decomposition import PCA
 from sklearn.feature_selection import VarianceThreshold
 import sklearn.cross_validation
 import sklearn.svm
@@ -66,10 +67,11 @@ def get_classifier():
     return sklearn.naive_bayes.GaussianNB()
 
 class SeriesClassifier(object):
-    def __init__(self, clf, vectorizer, variance_threshold, inverse_document_frequency):
+    def __init__(self, clf, vectorizer, variance_threshold, pca, inverse_document_frequency):
         self.clf = clf
         self.vectorizer = vectorizer
         self.variance_threshold = variance_threshold
+        self.pca = pca
         self.inverse_document_frequency = inverse_document_frequency
 
     def extract_features(self, lines):
@@ -77,11 +79,14 @@ class SeriesClassifier(object):
         for word in w_f:
             tf = w_f[word]
             idf = self.inverse_document_frequency[word]
+            print idf, word
             w_f[word] = math.log(1 + tf) * math.log(idf) if idf != 0 else 0
 
         features = self.vectorizer.transform([w_f])
-        features = self.variance_threshold.transform(features)
-        return features[0].toarray()
+        #features = self.variance_threshold.transform(features)
+        features = features.toarray()
+        #features = self.pca.transform(features)
+        return features[0]
 
     def predict(self, features):
         return self.clf.predict(features)[0]
@@ -117,9 +122,10 @@ if __name__ == '__main__':
 
     # Calculating the inverse document frequency for each word
     inverse_document_frequency = Counter()
+    total_frequency = float(sum(sum(w_f.values()) for w_f in words_frequencies))
     for word in words_set:
-        total_word_frequency = len(set(series_labels[i] for i, w_f in enumerate(words_frequencies) if word in w_f))
-        inverse_document_frequency[word] = math.log(len(series_list) / total_word_frequency)
+        total_word_frequency = sum(w_f[word] for w_f in words_frequencies)
+        inverse_document_frequency[word] = math.log(total_frequency / total_word_frequency)
 
 
     # Replacing word frequencies by tf-idf
@@ -136,16 +142,20 @@ if __name__ == '__main__':
     # Dropping features with low variance
     MIN_VARIANCE = 0.04
     variance_threshold = VarianceThreshold(threshold=MIN_VARIANCE)
-    feature_vectors = variance_threshold.fit_transform(feature_vectors)
+    #feature_vectors = variance_threshold.fit_transform(feature_vectors)
 
     # Turning to a dense matrix
     feature_vectors = feature_vectors.toarray()
+
+    # PCA
+    pca = PCA(n_components=20)
+    #feature_vectors = pca.fit_transform(feature_vectors)
 
     # Cross-validation
     classification_validation(feature_vectors, series_labels)
 
     # Training an SVM classifier and dumping it to a file
     clf = get_classifier().fit(feature_vectors, series_labels)
-    series_clf = SeriesClassifier(clf, vectorizer, variance_threshold, inverse_document_frequency)
+    series_clf = SeriesClassifier(clf, vectorizer, variance_threshold, pca, inverse_document_frequency)
     with open('clf.pickle', 'w') as clf_file:
         pickle.dump(series_clf, clf_file)
