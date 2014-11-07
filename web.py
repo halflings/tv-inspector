@@ -11,7 +11,9 @@ with open('clf.pickle') as clf_file:
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    series = series_classifier.clf.classes_
+    series=  map(lambda s : s.replace('_', ' ').title(), series)
+    return render_template('index.html', series=', '.join(series))
 
 @app.route('/predict', methods=['POST'])
 def predict_dialog():
