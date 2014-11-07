@@ -34,6 +34,27 @@ def extract_features(subtitle_lines):
             word_counter[token] += 1
     return word_counter
 
+
+def extract_features_ngrams(subtitle_lines, n=2):
+    word_counter = Counter()
+    for line in subtitle_lines:
+        tokens = nltk.word_tokenize(line)
+        for i in xrange(len(tokens) - (n - 1)):
+            ngram = []
+            for j in xrange(n):
+                token = tokens[i+j].lower()
+                # Skipping stop words, tokens starting with "'" and one reoeated character (like '---' and such)
+                if token in STOP_WORDS or token.startswith("'") or len(set(token)) == 1:
+                    continue
+                # Stemming
+                token = STEMMER.stem(token)
+                ngram.append(token)
+            ngram = tuple(ngram)
+            word_counter[ngram] += 1
+    return word_counter
+
+extract_features = extract_features_ngrams
+
 def extract_lines(subtitle_path):
     try:
         subtitle_object = pysrt.open(subtitle_path)
@@ -81,7 +102,6 @@ class SeriesClassifier(object):
         for word in w_f:
             tf = w_f[word]
             idf = self.inverse_document_frequency[word]
-            print idf, word
             w_f[word] = math.log(1 + tf) * math.log(idf) if idf != 0 else 0
 
         features = self.vectorizer.transform([w_f])
@@ -166,11 +186,11 @@ if __name__ == '__main__':
         pickle.dump(series_clf, clf_file)
 
     # Clustering
-    CLUSTERING = False
+    CLUSTERING = True
     if CLUSTERING:
         temp_pca = PCA(n_components=4)
         X = temp_pca.fit_transform(feature_vectors)
-        bandwidth = estimate_bandwidth(X, quantile=0.2, n_samples=500)
+        bandwidth = estimate_bandwidth(X, quantile=0.4, n_samples=1000)
         ms = MeanShift(bandwidth=bandwidth, bin_seeding=True)
         ms.fit(X)
         labels = ms.labels_
