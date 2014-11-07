@@ -7,5 +7,10 @@ var errorMessage = function(msg) {
 $(document).ready(function() {
     error_bar = $('#error-bar');
 
-    // document.ready code should go here
+    $('#prediction-button').click(function() {
+        var dialogText = $('#dialog-text').val();
+        $.post('/predict', {dialog: dialogText}, function(data) {
+            $('#prediction-result').text(data.prediction);
+        });
+    });
 });

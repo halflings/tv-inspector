@@ -87,7 +87,7 @@ a:hover, a:active, a:focus {
 }
 
 /* Dialog text */
-.dialog-text {
+#dialog-text {
     width: 100%;
     border: 30px solid rgba(42, 42, 42, 1);
     padding: 22px;
