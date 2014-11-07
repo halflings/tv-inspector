@@ -116,35 +116,31 @@ class SeriesClassifier(object):
         return self.clf.predict(features)[0]
 
 if __name__ == '__main__':
-    shows = dict(comedy=['modern_family', '30_rock', 'big_bang_theory', 'parks_and_recreation', 'entourage'],
-                 political=['house_of_cards', 'the_west_wing', 'borgen', 'the_newsroom'],
-                 horror=['american_horror_story', 'penny_dreadful', 'the_walking_dead'])
-
-    series_list = sum(shows.values(), [])
+    series_list = ['modern_family', '30_rock', 'big_bang_theory', 'parks_and_recreation', 'entourage',
+                   'house_of_cards', 'the_west_wing', 'borgen', 'the_newsroom',
+                   'american_horror_story', 'penny_dreadful', 'the_walking_dead']
 
     words_frequencies = []
 
     series_labels = []
     subtitle_labels = []
-    genre_labels = []
 
-    for genre, genre_series in shows.iteritems():
-        for series in genre_series:
-            print '* {}'.format(series.upper())
-            subtitles = [os.path.join(series, sub) for sub in os.listdir(series) if not sub.startswith('.')]
+    for series in series_list:
+        print '* {}'.format(series.upper())
+        folder_path = os.path.join('subtitles', series)
+        subtitles = [os.path.join(folder_path, path) for path in os.listdir(folder_path) if not path.startswith('.')]
 
-            for sub_path in subtitles:
-                print '  . Analyzed subtitle "{}"'.format(sub_path)
-                subtitle_lines = extract_lines(sub_path)
-                # Some encoding errors can cause no lines to be detected
-                if not subtitle_lines:
-                    continue
-                words_frequencies.append(extract_features(subtitle_lines))
-                series_labels.append(series)
-                genre_labels.append(genre)
-                subtitle_labels.append(sub_path)
+        for sub_path in subtitles:
+            print '  . Analyzed subtitle "{}"'.format(sub_path)
+            subtitle_lines = extract_lines(sub_path)
+            # Some encoding errors can cause no lines to be detected
+            if not subtitle_lines:
+                continue
+            words_frequencies.append(extract_features(subtitle_lines))
+            series_labels.append(series)
+            subtitle_labels.append(sub_path)
 
-    series_labels, genre_labels, subtitle_labels = map(np.array, [series_labels, genre_labels, subtitle_labels])
+    series_labels, subtitle_labels = map(np.array, [series_labels, subtitle_labels])
 
     words_set = set(word for w_f in words_frequencies for word in w_f)
 
@@ -179,7 +175,7 @@ if __name__ == '__main__':
     # PCA
     pca = PCA(n_components=20)
     #feature_vectors = pca.fit_transform(feature_vectors)
-
+    print feature_vectors.shape
     # Cross-validation
     classification_validation(feature_vectors, series_labels)
 
