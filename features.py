@@ -11,6 +11,7 @@ from sklearn.feature_extraction import DictVectorizer
 from sklearn.feature_selection import VarianceThreshold
 import sklearn.cross_validation
 import sklearn.svm
+import sklearn.naive_bayes
 
 URL_REGEX = '(?:www\.)|(?:https?://)\S+\.\S+'
 STOP_WORDS = set(nltk.corpus.stopwords.words('english')) | {"n't", "..."} | set(string.punctuation)
@@ -49,11 +50,11 @@ def extract_lines(subtitle_path):
 def classification_validation(features, labels):
     X_train, X_test, y_train, y_test = sklearn.cross_validation.train_test_split(features, labels, test_size=0.3, random_state=0)
 
-    clf = sklearn.svm.SVC().fit(X_train, y_train)
+    clf = get_classifier().fit(X_train, y_train)
 
     print "* Some predictions:"
     print "(actual_series : prediction)"
-    for i, features in enumerate(X_test[:20]):
+    for i, features in enumerate(X_test[:5]):
         series = y_test[i]
         prediction = clf.predict(features)[0]
         print '"{}" predicted as "{}"'.format(series, prediction)
@@ -61,23 +62,29 @@ def classification_validation(features, labels):
 
     print "* Classifier score: {}".format(clf.score(X_test, y_test))
 
+def get_classifier():
+    return sklearn.naive_bayes.GaussianNB()
+
 class SeriesClassifier(object):
-    def __init__(self, svm, vectorizer, inverse_document_frequency):
-        self.svm = svm
+    def __init__(self, clf, vectorizer, variance_threshold, inverse_document_frequency):
+        self.clf = clf
         self.vectorizer = vectorizer
+        self.variance_threshold = variance_threshold
         self.inverse_document_frequency = inverse_document_frequency
 
     def extract_features(self, lines):
         w_f = extract_features(lines)
         for word in w_f:
-            term_frequency = w_f[word]
-            tf_idf = term_frequency * self.inverse_document_frequency[word]
-            w_f[word] = tf_idf
+            tf = w_f[word]
+            idf = self.inverse_document_frequency[word]
+            w_f[word] = math.log(1 + tf) * math.log(idf) if idf != 0 else 0
 
-        return self.vectorizer.transform(w_f)
+        features = self.vectorizer.transform([w_f])
+        features = self.variance_threshold.transform(features)
+        return features[0].toarray()
 
     def predict(self, features):
-        return self.svm.predict(features)[0]
+        return self.clf.predict(features)[0]
 
 if __name__ == '__main__':
     shows = dict(comedy=['modern_family', '30_rock', 'big_bang_theory', 'parks_and_recreation', 'entourage'],
@@ -117,27 +124,28 @@ if __name__ == '__main__':
 
     # Replacing word frequencies by tf-idf
     for w_f in words_frequencies:
-        frequency_sum = float(max(w_f.values()))
-        words = w_f.keys()
-        for word in words:
-            term_frequency = w_f[word]
-            tf_idf = term_frequency * inverse_document_frequency[word]
-            w_f[word] = tf_idf
+        for word in w_f:
+            tf = w_f[word]
+            idf = inverse_document_frequency[word]
+            w_f[word] = math.log(1 + tf) * math.log(idf) if idf != 0 else 0
 
     # Vectorizing the word count among all series
     vectorizer = DictVectorizer()
     feature_vectors = vectorizer.fit_transform(words_frequencies)
 
     # Dropping features with low variance
-    MIN_VARIANCE = 0.05
+    MIN_VARIANCE = 0.04
     variance_threshold = VarianceThreshold(threshold=MIN_VARIANCE)
     feature_vectors = variance_threshold.fit_transform(feature_vectors)
+
+    # Turning to a dense matrix
+    feature_vectors = feature_vectors.toarray()
 
     # Cross-validation
     classification_validation(feature_vectors, series_labels)
 
     # Training an SVM classifier and dumping it to a file
-    svm = sklearn.svm.SVC().fit(feature_vectors, series_labels)
-    series_clf = SeriesClassifier(svm, vectorizer, inverse_document_frequency)
-    with open('clf.pickle', 'w') as svm_file:
-        pickle.dump(series_clf, svm_file)
+    clf = get_classifier().fit(feature_vectors, series_labels)
+    series_clf = SeriesClassifier(clf, vectorizer, variance_threshold, inverse_document_frequency)
+    with open('clf.pickle', 'w') as clf_file:
+        pickle.dump(series_clf, clf_file)
